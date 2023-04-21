@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-#webbruteforcer.py : @jockemedlinux 2023-04-09      #
-#Version v1.0: Bruteforcing web login form easily.  #
-##############################################################
+#web-brute.py : @jockemedlinux 2023-04-09     Not universal  		   #
+#Version v1.0: Bruteforcing web login form easily with cookies support #
+########################################################################
 import requests,argparse,sys
 def login(url, username, password, cookies):
 	consecutive_200s = 0
