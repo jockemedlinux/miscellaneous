@@ -49,4 +49,7 @@ Searches for company and country of provided MAC address
 xx:xx:xx:xx:xx:xx
 ```
 
-
+## jml-shellshock.py
+Easy script to exploit the shellshock vulnerability. Only tested on virutal vulnhub machine symfonos3.
+./jml-ShellShock.py -U http://symfonos.local/cgi-bin/underworld/
+[+] What is your command?: cat /etc/passwd
