@@ -51,5 +51,23 @@ xx:xx:xx:xx:xx:xx
 
 ## jml-shellshock.py
 Easy script to exploit the shellshock vulnerability. Only tested on virutal vulnhub machine symfonos3.
+```
 ./jml-ShellShock.py -U http://symfonos.local/cgi-bin/underworld/
 [+] What is your command?: cat /etc/passwd
+```
+
+## jml-portscanner.py
+Super simple not so good portscanner.
+```
+└─$ python3 jml-portscanner.py -H 127.0.0.1 -P 65535
+
+ +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+ |J|M|L|-|p|o|r|t|s|c|a|n|n|e|r|
+ +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+[+] Port 21 is open
+[+] Port 22 is open
+[+] Port 44 is open
+[+] Port 80 is open
+[+] Port 65535 is open
+```
