@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-#brute.py : @jockemedlinux 2023-04-21      			#
+#jml-wordpress-brute.py : @jockemedlinux 2023-04-21      			#
 #Version v1.0: Bruteforcing web login form easily.  #
 #####################################################
 import requests,argparse,sys,time

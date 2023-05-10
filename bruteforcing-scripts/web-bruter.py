@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 #web-brute.py : @jockemedlinux 2023-04-09     Not universal  		   #
-#Version v1.0: Bruteforcing web login form easily with cookies support #
+#Version v1.1: Bruteforcing web login form easily with cookies support #
 ########################################################################
 import requests,argparse,sys
 def login(url, username, password, cookies):
