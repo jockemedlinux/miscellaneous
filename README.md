@@ -71,3 +71,16 @@ Super simple not so good portscanner.
 [+] Port 80 is open
 [+] Port 65535 is open
 ```
+
+## jml-portscanner.py
+Simple and stealthy webserver which allows file PUT and file POST for encrypted filetransfer..
+```
+└─$ ./jml-filetransfer.py  -h
+usage: jml-filetransfer.py [-h] [-i I] [-p P]
+
+options:
+  -h, --help  show this help message and exit
+  -i I        specify ip to listen on.
+  -p P        specify port to listen on.
+
+```

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-#egrabber.py : @jockemedlinux 2022-08-05 :EASY EMAIL-GRABBER#
+#egrabber.py : @jokarlberget 2022-08-05 : EASY EMAIL-GRABBER#      #
 #Version v1.2: Parsing possible usernames                   #
 #############################################################
 import requests, argparse, re, itertools
@@ -29,7 +29,7 @@ try:
         print("-" * 65)
         print(f"Could not find any emails on this page:\t {args.URL}")
         print("-" * 65)
-#####NAMES SECTION#####
+#####USERNAMES SECTION#####
     usernames_list = []
     for names in ucontent:
         if names not in usernames_list:
