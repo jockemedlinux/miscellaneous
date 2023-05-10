@@ -1,4 +1,4 @@
-## php-upload.php
+## jml-php-upload.php
 This is just an easy way to quickly transfer files via PUT or HTTP. The file will be uploaded to the directory from where the server is started. Make sure the directory has the correct permissions in order for this to work properly. (rename the file to index.php for easier handling)
 
 Can be used in different ways.
@@ -25,12 +25,12 @@ curl -T file.txt http://ip-to-your-PUT-server/
 ## Listjoiner
 Easy as it sounds. Joins two lists of your choice into a file with a ":" seperator. 
 ```
-./listjoiner.py firstnames.txt surnames.txt joinednames.txt
+./jml-listjoiner.py firstnames.txt surnames.txt joinednames.txt
 ```
 ## Listworker
 Easy as it sounds. Joins two lists of your choice into a file with a specified seperator.
 ```
-./listworker.py firstnames.txt surnames.txt joinednames.txt ':'
+./jml-listworker.py firstnames.txt surnames.txt joinednames.txt ':'
 ```
 
 # Scraping tools
@@ -38,23 +38,17 @@ Easy as it sounds. Joins two lists of your choice into a file with a specified s
 ## egrabber.py
 Grabs the emails of a site and parses emails and usernames into seperate files.
 ```
-./egrabber.py http://localhost
+./jml-egrabber.py http://localhost
 ```
 
 ## MAC-lookup.py
 Searches for company and country of provided MAC address
 ![bild](https://user-images.githubusercontent.com/123998153/228343138-110a744d-e8f4-4a04-9a2e-2f614a5803ce.png)
 ```
-./MAC-lookup.py 
+./jml-MAC-lookup.py 
 xx:xx:xx:xx:xx:xx
 ```
-
-## jml-shellshock.py
-Easy script to exploit the shellshock vulnerability. Only tested on virutal vulnhub machine symfonos3.
-```
-./jml-ShellShock.py -U http://symfonos.local/cgi-bin/underworld/
-[+] What is your command?: cat /etc/passwd
-```
+# Scanning Tools 
 
 ## jml-portscanner.py
 Super simple not so good portscanner.
@@ -72,7 +66,7 @@ Super simple not so good portscanner.
 [+] Port 65535 is open
 ```
 
-## jml-portscanner.py
+## jml-filetransfer.py
 Simple and stealthy webserver which allows file PUT and file POST for encrypted filetransfer..
 ```
 └─$ ./jml-filetransfer.py  -h
@@ -84,3 +78,15 @@ options:
   -p P        specify port to listen on.
 
 ```
+
+# Other Tools
+
+## jml-ShellShock.py
+Easy script to exploit the shellshock vulnerability. Only tested on virutal vulnhub machine symfonos3.
+```
+./jml-ShellShock.py -U http://symfonos.local/cgi-bin/underworld/
+[+] What is your command?: cat /etc/passwd
+```
+
+
+
