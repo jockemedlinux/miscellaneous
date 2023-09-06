@@ -232,6 +232,7 @@ losetup -D
 echo -e "\e[93m[INFO] Restarting dockers and services\e[0m"
 docker restart $(docker ps -a -q)
 systemctl restart smbd
-checkpoint "[+] Congratulation! The script finished successfully and services has been restored. BYE!"
+checkpoint "Restarting dockers and services." 
+echo -e "\e[92m[+] Congratulation! The script finished successfully and services has been restored. BYE!\e[0m"
 chmod -R 777 /mnt/
 exit 0
