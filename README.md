@@ -1,3 +1,5 @@
+##Disclaimer - none of the tools listed in this repository is to be used in a malicious or nefarious way. All scripts are made in educational purposes and made to be tested/used on your own applications.
+
 ## jml-php-upload.php
 This is just an easy way to quickly transfer files via PUT or HTTP. The file will be uploaded to the directory from where the server is started. Make sure the directory has the correct permissions in order for this to work properly. (rename the file to index.php for easier handling)
 
