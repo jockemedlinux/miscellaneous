@@ -8,8 +8,9 @@
 
 ### DEVICES AND FILESYSTEMS
 backupdevice=/dev/sda
+cloudbackupdir=/mnt/DATADISK/_BACKUPS/server/CLOUD
 backupdirectory=/mnt/DATADISK/_BACKUPS/server/thinker-server
-dockerbackupdir=/mnt/DATADISK/_BACKUPS/dockers/
+dockerbackupdir=/mnt/DATADISK/_BACKUPS/server/dockers/
 dockerimagenames=$(docker images --format {{.Repository}})
 dockercontainernames=$(docker ps --format {{.Names}})
 name=crypted_
@@ -88,7 +89,6 @@ if [[ $answer == "Y" || $answer == "y" ]]; then
     for dockerimage in $dockerimagenames; do
         docker save $dockerimage | pv -tpre > "$dockerbackupdir/$(date +%F)/$dockerimage.tar"
     done
-
     echo -e "\e[93m[INFO] Backing up docker directories. (Will prune dangling dockers) \e[0m"
     tar czf "$dockerbackupdir/$(date +%F)/docker-directories.tar.gz" /srv/
     echo "Y" | docker system prune
@@ -97,6 +97,19 @@ if [[ $answer == "Y" || $answer == "y" ]]; then
 else
    echo -e "\e[93m[INFO] Skipping docker backups\e[0m"
    checkpoint "Skipping docker backup"
+fi
+
+echo -e "\e[93m[INFO] Do you want to backup your cloud?\e[0m"
+echo -e "\e[93m[INFO] This will significantly increase the time for the backup. Proceed? [Y/N]: \e[0m"
+read cloudanswer
+if [[ $cloudanswer == "Y" || $cloudanswer == "y" ]]; then
+   echo -e "\e[93m[INFO] Backing up your cloud \e[0m"
+   mkdir -p $cloudbackupdir/$(date +%F)
+   tar czf "$cloudbackupdir/$(date +%F)/nextcloud.tar.gz" /mnt/DATADISK/_CLOUD/
+   checkpoint "Backing up cloud settings, data, and configurations"
+else
+   echo -e "\e[93m[INFO] Skipping cloud backup\e[0m"
+   checkpoint "Skipping cloud backup"
 fi
 
 ### STOP SERVICES AND DOCKERS
